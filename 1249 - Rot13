@@ -1,0 +1,30 @@
+#include "iostream"
+#include "string"
+using namespace std;
+int main()
+{
+	string line;
+	
+	while (getline(cin, line, '\n'))
+	{
+		for (int i = 0; i < line.size();i++)
+
+			if (isalpha(line[i]))
+			{
+				if (isupper(line[i]))
+				{
+					line[i]=tolower(line[i]);
+					line[i] = 'a' + ((line[i] - 'a' + 13) % 26);
+					line[i] = toupper(line[i]);
+				}
+				else {
+
+					line[i] = 'a' + ((line[i] - 'a' + 13) % 26);
+				}
+			}
+            cout << line << endl;
+	}
+	
+
+    return 0;
+}
