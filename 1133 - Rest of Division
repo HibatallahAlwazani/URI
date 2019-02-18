@@ -1,0 +1,26 @@
+#include <iostream>
+ 
+using namespace std;
+ 
+int main() {
+ 
+int x, y,m,n;
+cin>>x>>y;
+if(x>y)
+{m=y;
+n=x;}
+else
+{m=x;
+n=y;
+
+}
+m++;
+for(;m<n;m++)
+{
+    if(m%5==2 ||m%5==3)
+    cout<<m<<endl;
+
+}
+
+    return 0;
+}
