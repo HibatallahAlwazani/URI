@@ -1,0 +1,35 @@
+#include <iostream>
+ 
+using namespace std;
+ 
+int main() {
+ 
+    int t;
+	cin >> t;
+	while (t--)
+	{
+		int l;
+		int swaps = 0;
+		cin >> l;
+		int *car = new int[l];
+		for (int i = 0; i < l; i++)
+			cin >> car[i];
+	
+		
+			for (int i = 0; i < l-1; i++)
+				for (int j = 0; j < l-i - 1; j++)
+				{
+					if (car[j]> car[j + 1])
+					{
+						int temp = car[j+1];
+						car[j+1] = car[j ];
+						car[j] = temp;
+						swaps++;
+					}
+				}
+			
+			cout <<"Optimal train swapping takes "<< swaps<<" swaps." << endl;
+	}
+ 
+    return 0;
+}
