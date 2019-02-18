@@ -1,0 +1,32 @@
+#include <iostream>
+ 
+using namespace std;
+ 
+int main() {
+long long x, y[7], r;
+cin>>x;
+r=x;
+y[0]=x/100;
+x=x%100;
+y[1]=x/50;
+x=x%50;
+y[2]=x/20;
+x=x%20;
+y[3]=x/10;
+x=x%10;
+y[4]=x/5;
+x=x%5;
+y[5]=x/2;
+x=x%2;
+y[6]=x;
+cout<<r<<endl;
+cout<<y[0]<<" nota(s) de R$ 100,00"<<endl;
+cout<<y[1]<<" nota(s) de R$ 50,00"<<endl;
+cout<<y[2]<<" nota(s) de R$ 20,00"<<endl;
+cout<<y[3]<<" nota(s) de R$ 10,00"<<endl;
+cout<<y[4]<<" nota(s) de R$ 5,00"<<endl;
+cout<<y[5]<<" nota(s) de R$ 2,00"<<endl;
+cout<<y[6]<<" nota(s) de R$ 1,00"<<endl;
+
+    return 0;
+}
