@@ -1,0 +1,33 @@
+#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
+int main()
+{
+  int x1, y1, x2, y2;
+  while (true)
+  {cin >> x1 >>y1>>x2>>y2;
+  if(x1==0 && x2==0 &&y1==0 &&y2==0)
+  break;
+  int m;
+  if(x1==x2 && y1==y2)
+  {m=0;
+  cout<<m<<endl;}
+  
+   else if(abs(x2-x1)==abs(y2-y1))
+   {m=1;
+   cout<<m<<endl;
+   }
+   else if(x2==x1 || y2==y1)
+   {
+       m=1;
+       cout<<m<<endl;
+   }
+   else
+   {
+       m=2;
+       cout<<m<<endl;
+   }
+
+  }
+}
