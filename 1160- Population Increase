@@ -1,0 +1,25 @@
+#include <iostream>
+ 
+using namespace std;
+ 
+int main() {
+ 
+ int t;
+cin>>t;
+while(t--)
+{
+    int pa, pb, c=0;
+    double ga, gb;
+    cin>>pa>>pb>>ga>>gb;
+    while(pa<=pb && c<=100)
+    {pa=pa +pa*(ga/100.0);
+    pb=pb +pb*(gb/100.0);
+    c++;
+    }
+    if(c>100)
+    cout<<"Mais de 1 seculo."<<endl;
+    else
+    cout<<c<<" anos."<<endl;
+}
+    return 0;
+}
